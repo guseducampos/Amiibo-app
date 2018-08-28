@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JustNetworking
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+       
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+         GlobalConfiguration.setCurrentURL(URL(string: "http://www.amiiboapi.com/api")!)
+        
+        let viewController = AmiibosViewController(viewModel: AmiiboViewModel(reachability: try! DefaultReachabilityService()))
+        let navigation = UINavigationController(rootViewController: viewController)
+        
+        window?.rootViewController = navigation
+        window?.makeKeyAndVisible()
+
+        
         return true
     }
 

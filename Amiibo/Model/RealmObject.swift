@@ -10,10 +10,25 @@ import Foundation
 import RealmSwift
 import Realm
 
-class RealmObject<T: Codable>: Object {
+final class RealmType: Object {
+    
+    required init(value: Any, schema: RLMSchema) {
+        super.init(value: value, schema: schema)
+    }
+    
+    required init(realm: RLMRealm, schema: RLMObjectSchema) {
+        super.init(realm: realm, schema: schema)
+    }
+    
+    required init() {
+        super.init()
+    }
+}
+
+final class RealmObject<T: Codable>: Object {
 
     @objc dynamic var data: Data? = nil
-
+    
     func decode(using decoder: JSONDecoder = JSONDecoder()) -> T? {
         guard let data = self.data else {
             return nil
@@ -40,9 +55,5 @@ class RealmObject<T: Codable>: Object {
 
     required init() {
         super.init()
-    }
-
-    override static func primaryKey() -> String? {
-        return "data"
     }
 }

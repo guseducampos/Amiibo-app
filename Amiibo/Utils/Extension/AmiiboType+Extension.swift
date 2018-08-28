@@ -10,8 +10,9 @@ import RxDataSources
 
 extension AmiiboType: SectionModelType {
     
-    init(original: AmiiboType, items: [Amiibo]) {
+    init(original: AmiiboType, items: [(type: Type, items: [Amiibo])]) {
         self = original
         self.items = items
     }
+    
 }

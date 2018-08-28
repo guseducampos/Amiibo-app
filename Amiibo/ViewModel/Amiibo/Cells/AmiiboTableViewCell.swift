@@ -6,19 +6,40 @@
 //  Copyright © 2018 gcamposApps. All rights reserved.
 //
 
-import UIKit
+import RxCocoa
+import RxSwift
+import Kingfisher
 
-class AmiiboTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+final class AmiiboTableViewCell: UITableViewCell {
+    
+    var amiibos: BehaviorRelay<[Amiibo]> = BehaviorRelay(value: [])
+    
+    private let disposeBag = DisposeBag()
+    
+    @IBOutlet weak var collectionView: UICollectionView! {
+        willSet {
+            newValue.register(UINib(nibName: "AmiiboCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "cell")
+            newValue.delegate = self
+            bind(colletionView: newValue)
+        }
     }
     
+    private func bind(colletionView: UICollectionView) {
+        amiibos.bind(to: colletionView.rx.items(cellIdentifier: "cell",
+                                                cellType: AmiiboCollectionViewCell.self)) { index, item , cell in
+            cell.amiiboImageView.kf.setImage(with: URL(string: item.image))
+            }.disposed(by: disposeBag)
+    }
+}
+
+
+extension AmiiboTableViewCell: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemsPerRow:CGFloat = 4
+        let hardCodedPadding:CGFloat = 5
+        let itemWidth = (collectionView.bounds.width / itemsPerRow) - hardCodedPadding
+        let itemHeight = collectionView.bounds.height - (2 * hardCodedPadding)
+        return CGSize(width: itemWidth, height: itemHeight)
+    }
 }

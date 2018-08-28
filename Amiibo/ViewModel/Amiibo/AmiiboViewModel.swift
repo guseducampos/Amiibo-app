@@ -11,9 +11,9 @@ import Realm
 import RealmSwift
 import JustNetworking
 
-struct AmiiboType: Codable {
+struct AmiiboType {
     var type: Type
-    var items: [Amiibo]
+    var items: [(type: Type, items: [Amiibo])]
 }
 
 protocol AmiiboViewModelOutputs {
@@ -29,14 +29,12 @@ protocol AmiiboViewModelType {
 final class AmiiboViewModel: AmiiboViewModelType, AmiiboViewModelOutputs  {
     
     // MARK: Properties
-    private let realm: Realm
     private let reachability: ReachabilityService
     private let network: API
     
     // MARK: Initializer
-    init(requester: APIRequester = URLSession.shared, realm: Realm, reachability: ReachabilityService) {
+    init(requester: APIRequester = URLSession.shared, reachability: ReachabilityService) {
         self.network = API(requester: requester)
-        self.realm = realm
         self.reachability = reachability
     }
     
@@ -56,41 +54,43 @@ final class AmiiboViewModel: AmiiboViewModelType, AmiiboViewModelOutputs  {
     }
     
     // MARK: functions
-   private func getTypes() -> Observable<[Type]> {
+   private func getTypes() -> Observable<AmiiboResponse<[Type]>> {
         return network.rx.execute(TypeRequest.type(route: .all))
     }
     
-    private func getAmiibos() -> Observable<[Amiibo]> {
+    private func getAmiibos() -> Observable<AmiiboResponse<[Amiibo]>> {
         return network.rx.execute(AmiiboRequest.amiibo(router: .all))
     }
     
     private func combined() -> Observable<[AmiiboType]> {
         return getTypes().flatMap { types in
-            self.getAmiibos().map { $0.groupBy(types:types )  }
+            self.getAmiibos().map { (types: types.amiibo, amiibos: $0.amiibo )  }
             }.flatMap {
-                self.save($0)
+                self.save(types: $0.types, amiibos: $0.amiibos)
         }
     }
     
     private func getFromCache() -> Observable<[AmiiboType]> {
         return Observable.create({ observer -> Disposable in
-            try? self.realm.write {
-                let objects = self.realm.objects(RealmObject<[AmiiboType]>.self).first?.decode() ?? []
-                observer.onNext(Array(objects))
-                observer.onCompleted()
-            }
+            let realm = try! Realm()
+            let types = Array(realm.objects(Type.self))
+            let objects = Array(realm.objects(Amiibo.self)).groupBy(types: types)
+            observer.onNext(objects)
+            observer.onCompleted()
             return Disposables.create()
-        })
+        }).subscribeOn(MainScheduler.instance)
     }
     
-    private func save(_ object: [AmiiboType]) -> Observable<[AmiiboType]> {
+    private func save(types: [Type], amiibos: [Amiibo]) -> Observable<[AmiiboType]> {
         return Observable.create({ observer -> Disposable in
-            try? self.realm.write {
-                self.realm.add(RealmObject(value: object), update: true)
-                observer.onNext(object)
-                observer.onCompleted()
+            let realm = try! Realm()
+            try? realm.write {
+                realm.add(types, update: true)
+                realm.add(amiibos, update: true)
             }
+            observer.onNext(amiibos.groupBy(types: types))
+            observer.onCompleted()
             return Disposables.create()
-        })
+        }).subscribeOn(MainScheduler.instance)
     }
 }

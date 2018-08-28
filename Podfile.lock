@@ -1,0 +1,49 @@
+PODS:
+  - Differentiator (3.0.2)
+  - JustNetworking (1.0.1)
+  - Kingfisher (4.8.1)
+  - Realm (3.7.6):
+    - Realm/Headers (= 3.7.6)
+  - Realm/Headers (3.7.6)
+  - RealmSwift (3.7.6):
+    - Realm (= 3.7.6)
+  - RxCocoa (4.2.0):
+    - RxSwift (~> 4.0)
+  - RxDataSources (3.0.2):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.2.0)
+
+DEPENDENCIES:
+  - JustNetworking (~> 1.0)
+  - Kingfisher (~> 4.0)
+  - RealmSwift
+  - RxCocoa (~> 4.0)
+  - RxDataSources (~> 3.0)
+  - RxSwift (~> 4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Differentiator
+    - JustNetworking
+    - Kingfisher
+    - Realm
+    - RealmSwift
+    - RxCocoa
+    - RxDataSources
+    - RxSwift
+
+SPEC CHECKSUMS:
+  Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
+  JustNetworking: 33c4ac9f848062d2698b39bf1e76de2eb85cfbf4
+  Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
+  Realm: 9eaecad54712d6246d08ba34c10f354e4715d7d3
+  RealmSwift: 1fe08b4ebaeeaacf17f9ba0343f7b25c9fc31fa6
+  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
+  RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+
+PODFILE CHECKSUM: 56961d9c3374e1390be1c27a33dc9a2351978632
+
+COCOAPODS: 1.5.3
