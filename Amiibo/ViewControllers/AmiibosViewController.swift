@@ -52,6 +52,14 @@ class AmiibosViewController: UIViewController {
         binding()
     }
     
+    override func selectedAmiibo(_ parameter: Any) {
+        guard let amiibo = parameter as? Amiibo else {
+            return
+        }
+        let vc = DetailViewController(amiibo: amiibo)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     private func binding() {
         viewModel
             .outputs

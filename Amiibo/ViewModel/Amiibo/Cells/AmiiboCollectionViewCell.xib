@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="179" height="168"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ef2-hp-oKQ">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ef2-hp-oKQ">
                         <rect key="frame" x="0.0" y="0.0" width="179" height="168"/>
                     </imageView>
                 </subviews>

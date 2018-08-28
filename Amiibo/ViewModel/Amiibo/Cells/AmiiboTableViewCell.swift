@@ -29,6 +29,10 @@ final class AmiiboTableViewCell: UITableViewCell {
                                                 cellType: AmiiboCollectionViewCell.self)) { index, item , cell in
             cell.amiiboImageView.kf.setImage(with: URL(string: item.image))
             }.disposed(by: disposeBag)
+        
+        colletionView.rx.modelSelected(Amiibo.self).bind(onNext: { [weak self] in
+            self?.selectedAmiibo($0)
+        }).disposed(by: disposeBag)
     }
 }
 
