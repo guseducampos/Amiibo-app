@@ -12,9 +12,12 @@ import JustNetworking
 enum AmiiboRouter: Router {
 
     case all
-    
+
     var route: Route {
-        return Route(path: "/amiibo", method: .get)
+        switch self {
+        case .all:
+            return Route(path: "/amiibo", method: .get)
+        }
+        
     }
-    
 }

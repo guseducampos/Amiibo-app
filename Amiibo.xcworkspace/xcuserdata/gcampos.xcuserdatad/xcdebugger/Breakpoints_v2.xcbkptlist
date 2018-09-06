@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Amiibo/Utils/Extension/URLSession+Requester.swift"
+            timestampString = "557096273.916827"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "execute(_:response:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Amiibo/ViewModel/Amiibo/AmiiboViewModel.swift"
+            timestampString = "557342065.174153"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "showTypes"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Amiibo/ViewControllers/AmiibosSearchViewController.swift"
+            timestampString = "557343204.403425"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "binding()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Amiibo/ViewControllers/AmiibosSearchViewController.swift"
+            timestampString = "557343204.4034801"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "binding()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Amiibo/ViewControllers/AmiibosSearchViewController.swift"
+            timestampString = "557343204.403522"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "binding()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Amiibo.AmiibosSearchViewController.(binding in _0A439C97B5AA74342BE2D5E962C43D17)() -&gt; ()"
+                  moduleName = "Amiibo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gcampos/Documents/xCodeProjects/OcioProjects/Amiibo/Amiibo/ViewControllers/AmiibosSearchViewController.swift"
+                  timestampString = "557342471.4764251"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in Amiibo.AmiibosSearchViewController.(binding in _0A439C97B5AA74342BE2D5E962C43D17)() -&gt; ()"
+                  moduleName = "Amiibo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gcampos/Documents/xCodeProjects/OcioProjects/Amiibo/Amiibo/ViewControllers/AmiibosSearchViewController.swift"
+                  timestampString = "557342471.481199"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "38">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Amiibo/ViewControllers/AmiibosSearchViewController.swift"
+            timestampString = "557343204.403559"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "binding()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Amiibo/ViewModel/Search/AmiiboSearchViewModel.swift"
+            timestampString = "557887634.918628"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "showAmiibos"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; RxSwift.Observable&lt;Swift.Array&lt;Amiibo.Amiibo&gt;&gt; in Amiibo.AmiiboSearchViewModel.showAmiibos.getter : RxSwift.Observable&lt;Swift.Array&lt;Amiibo.Amiibo&gt;&gt;"
+                  moduleName = "Amiibo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gcampos/Documents/xCodeProjects/OcioProjects/Amiibo/Amiibo/ViewModel/Search/AmiiboSearchViewModel.swift"
+                  timestampString = "557343089.130869"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "17">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; RxSwift.Observable&lt;Swift.Array&lt;Amiibo.Amiibo&gt;&gt; in closure #1 () -&gt; RxSwift.Observable&lt;Swift.Array&lt;Amiibo.Amiibo&gt;&gt; in Amiibo.AmiiboSearchViewModel.showAmiibos.getter : RxSwift.Observable&lt;Swift.Array&lt;Amiibo.Amiibo&gt;&gt;"
+                  moduleName = "Amiibo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gcampos/Documents/xCodeProjects/OcioProjects/Amiibo/Amiibo/ViewModel/Search/AmiiboSearchViewModel.swift"
+                  timestampString = "557343089.133147"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "26">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Amiibo/ViewModel/Search/AmiiboSearchViewModel.swift"
+            timestampString = "557887634.918993"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "showAmiibos"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

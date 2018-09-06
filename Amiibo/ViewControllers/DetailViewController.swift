@@ -33,16 +33,11 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       serieNameLabel.text = amiibo.amiiboSeries
+        
+        serieNameLabel.text = amiibo.amiiboSeries
         amiiboNameLabel.text = amiibo.character
         gameSerieLabel.text = amiibo.gameSeries
         amiiboTypeLabel.text = amiibo.type
         amiiboImage.kf.setImage(with: URL(string: amiibo.image))
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
