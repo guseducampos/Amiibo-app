@@ -16,6 +16,11 @@ struct AmiiboType {
     var items: [(type: Type, items: [Amiibo])]
 }
 
+protocol AmiiboViewModelInput {
+    func viewDidLoad()
+}
+
+
 protocol AmiiboViewModelOutputs {
     
     var showTypes: Observable<[AmiiboType]> { get }
@@ -23,23 +28,51 @@ protocol AmiiboViewModelOutputs {
 
 protocol AmiiboViewModelType {
     
+    var inputs: AmiiboViewModelInput { get }
     var outputs: AmiiboViewModelOutputs { get }
 }
 
-final class AmiiboViewModel: AmiiboViewModelType, AmiiboViewModelOutputs  {
+final class AmiiboViewModel: AmiiboViewModelType,AmiiboViewModelInput, AmiiboViewModelOutputs {
     
-    // MARK: Properties
-    private let reachability: ReachabilityService
-    private let network: API
+    //MARK: Nested types
+    struct AmiiboSearchDependencies {
+        let amiiboRepository: AmiiboRepository
+        let amiiboTypeRepository: AmiiboTypeRepository
+        let amiiboService: AmiiboService
+        let reachabilityService: ReachabilityService
+    }
     
     // MARK: Initializer
-    init(requester: APIRequester = URLSession.shared, reachability: ReachabilityService) {
-        self.network = API(requester: requester)
-        self.reachability = reachability
+    init(dependencies: AmiiboSearchDependencies) {
+        
+        Observable.combineLatest(viewDidLoadProperty.asObservable(), dependencies.reachabilityService.reachability)
+            .flatMap { (tuple) in
+                if tuple.1.reachable {
+                    
+                }
+        }
+     //  let network = API(requester: dependencies.requester)
+       
+         /* Observable.combineLatest(viewDidLoadProperty.asObservable(), dependencies.reachabilityService.reachability).flatMap { status in
+            if status.1.reachable {
+                return network.rx.execute(TypeRequest.type(route: .all))
+            } else {}
+        
+        }*/
+        
+        
+       /* dependencies.reachabilityService.reachability.asObservable().flatMap { status in
+            if status.reachable {
+                
+            } else {
+                
+            }
+        }*/
+        //self.reachability = reachability
     }
     
     // MARK: Protocol implementation
-    lazy var showTypes: Observable<[AmiiboType]>  = {
+     var showTypes: Observable<[AmiiboType]> /* = {
         self.reachability.reachability.flatMap { status -> Observable<[AmiiboType]> in
             if status.reachable {
                 return self.combined()
@@ -47,20 +80,32 @@ final class AmiiboViewModel: AmiiboViewModelType, AmiiboViewModelOutputs  {
                 return self.getFromCache()
             }
         }
-    }()
+    }()*/
+    
+    
+    // MARK: Properties
+    var viewDidLoadProperty = BehaviorSubject(value: ())
+    
+    var inputs: AmiiboViewModelInput {
+        return self
+    }
     
     var outputs: AmiiboViewModelOutputs {
         return self
     }
     
     // MARK: functions
-   private func getTypes() -> Observable<AmiiboResponse<[Type]>> {
+    func viewDidLoad() {
+        
+    }
+    
+  /* private func getTypes() -> Observable<AmiiboResponse<[Type]>> {
         return network.rx.execute(TypeRequest.type(route: .all))
     }
     
     private func getAmiibos() -> Observable<AmiiboResponse<[Amiibo]>> {
         return network.rx.execute(AmiiboRequest.amiibo(router: .all))
-    }
+    }*/
     
     private func combined() -> Observable<[AmiiboType]> {
         return getTypes().flatMap { types in
