@@ -10,50 +10,17 @@ import Foundation
 import RealmSwift
 import Realm
 
-final class RealmType: Object {
+protocol RealmRepresentable {
     
-    required init(value: Any, schema: RLMSchema) {
-        super.init(value: value, schema: schema)
-    }
+    associatedtype RealmObject: Object
     
-    required init(realm: RLMRealm, schema: RLMObjectSchema) {
-        super.init(realm: realm, schema: schema)
-    }
-    
-    required init() {
-        super.init()
-    }
+    func realmObject() -> RealmObject 
 }
 
-final class RealmObject<T: Codable>: Object {
 
-    @objc dynamic var data: Data? = nil
+protocol DomainRepresentable {
     
-    func decode(using decoder: JSONDecoder = JSONDecoder()) -> T? {
-        guard let data = self.data else {
-            return nil
-        }
-        return try? decoder.decode(T.self, from: data)
-    }
+    associatedtype Object
     
-    func setValue(_ value: T, using encoder: JSONEncoder = JSONEncoder()) {
-        data = try? encoder.encode(value)
-    }
-
-    init(value: T, using encoder: JSONEncoder = JSONEncoder()) {
-        super.init()
-        self.data = try? encoder.encode(value)
-    }
-
-    required init(value: Any, schema: RLMSchema) {
-        super.init(value: value, schema: schema)
-    }
-
-    required init(realm: RLMRealm, schema: RLMObjectSchema) {
-        super.init(realm: realm, schema: schema)
-    }
-
-    required init() {
-        super.init()
-    }
+    func domainObject() -> Object
 }

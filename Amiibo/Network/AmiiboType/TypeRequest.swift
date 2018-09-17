@@ -13,8 +13,8 @@ enum TypeRequest {
     
     static func type<T: Decodable>(route: TypeRouter,
                                    decoder: JSONDecoder = JSONDecoder(),
-                                   compose: RequestBuilder = identity) -> BaseRequest<T> {
-        return BaseRequest<T>.makeRequest(type: T.self,
+                                   compose: @escaping RequestBuilder = identity) -> BaseRequest<AmiiboResponse<T>> {
+        return BaseRequest<AmiiboResponse<T>>.makeRequest(type: AmiiboResponse<T>.self,
                                           router: route,
                                           decoder: decoder,
                                           compose: compose)

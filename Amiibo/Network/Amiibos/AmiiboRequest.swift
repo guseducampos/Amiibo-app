@@ -12,9 +12,9 @@ enum AmiiboRequest {
     
     static func amiibo<T: Decodable>(router: AmiiboRouter,
                                      decoder: JSONDecoder = JSONDecoder(),
-                                     compose: RequestBuilder = identity) -> BaseRequest<T> {
+                                     compose: @escaping RequestBuilder = identity) -> BaseRequest<AmiiboResponse<T>> {
         
-        return BaseRequest<T>.makeRequest(type: T.self,
+        return BaseRequest<AmiiboResponse<T>>.makeRequest(type: AmiiboResponse<T>.self,
                                           router: router,
                                           decoder: decoder,
                                           compose: compose)

@@ -9,9 +9,21 @@
 import Realm
 import RealmSwift
 
-protocol AutoDecodableRealm {}
 
-class Type: Object, Decodable {
+struct Type: Decodable, RealmRepresentable {
+    
+    let key: String
+    let name: String
+    
+    func realmObject() -> RealmAmiiboType {
+        let amiiboType = RealmAmiiboType()
+        amiiboType.key = key
+        amiiboType.name = name
+        return amiiboType
+    }
+}
+
+class RealmAmiiboType: Object, Decodable, DomainRepresentable {
     
     @objc dynamic var key: String = ""
     @objc dynamic var name: String = ""
@@ -42,5 +54,9 @@ class Type: Object, Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         key =  try container.decode(String.self, forKey: .key)
         name = try container.decode(String.self, forKey: .name)
+    }
+    
+    func domainObject() -> Type {
+        return Type(key: self.key, name: self.name)
     }
 }

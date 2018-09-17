@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2808A93221375710003F6C4E /* AmiiboSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2893F60E21361573001EB754 /* AmiiboSearchViewModel.swift */; };
-		286989E12147310400CA32B2 /* AmiiboRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286989E02147310400CA32B2 /* AmiiboRepository.swift */; };
-		286989E42147381100CA32B2 /* AmiiboTypeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286989E32147381100CA32B2 /* AmiiboTypeRepository.swift */; };
-		286989E62147476E00CA32B2 /* AmiiboService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286989E52147476E00CA32B2 /* AmiiboService.swift */; };
+		2815C4D1215049B20045F90F /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2815C4D0215049B20045F90F /* Dependencies.swift */; };
+		286989E12147310400CA32B2 /* AmiiboUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286989E02147310400CA32B2 /* AmiiboUseCase.swift */; };
+		286989E42147381100CA32B2 /* AmiiboTypeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286989E32147381100CA32B2 /* AmiiboTypeUseCase.swift */; };
 		2893F5FD2134CBB3001EB754 /* AmiibosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2893F5FB2134CBB3001EB754 /* AmiibosViewController.swift */; };
 		2893F5FE2134CBB3001EB754 /* AmiibosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2893F5FC2134CBB3001EB754 /* AmiibosViewController.xib */; };
 		2893F6012135C624001EB754 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2893F5FF2135C624001EB754 /* DetailViewController.swift */; };
@@ -60,9 +60,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		286989E02147310400CA32B2 /* AmiiboRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboRepository.swift; sourceTree = "<group>"; };
-		286989E32147381100CA32B2 /* AmiiboTypeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboTypeRepository.swift; sourceTree = "<group>"; };
-		286989E52147476E00CA32B2 /* AmiiboService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboService.swift; sourceTree = "<group>"; };
+		2815C4D0215049B20045F90F /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		286989E02147310400CA32B2 /* AmiiboUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboUseCase.swift; sourceTree = "<group>"; };
+		286989E32147381100CA32B2 /* AmiiboTypeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboTypeUseCase.swift; sourceTree = "<group>"; };
 		2893F5FB2134CBB3001EB754 /* AmiibosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiibosViewController.swift; sourceTree = "<group>"; };
 		2893F5FC2134CBB3001EB754 /* AmiibosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AmiibosViewController.xib; sourceTree = "<group>"; };
 		2893F5FF2135C624001EB754 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -139,13 +139,21 @@
 			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
-		286989DF214730C300CA32B2 /* Repository */ = {
+		2815C4CF215049A60045F90F /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				286989E02147310400CA32B2 /* AmiiboRepository.swift */,
-				286989E32147381100CA32B2 /* AmiiboTypeRepository.swift */,
+				2815C4D0215049B20045F90F /* Dependencies.swift */,
 			);
-			path = Repository;
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		286989DF214730C300CA32B2 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				286989E02147310400CA32B2 /* AmiiboUseCase.swift */,
+				286989E32147381100CA32B2 /* AmiiboTypeUseCase.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 		2893F60D2136155D001EB754 /* Search */ = {
@@ -179,7 +187,8 @@
 		4A5FA8B4212F558F000B75D2 /* Amiibo */ = {
 			isa = PBXGroup;
 			children = (
-				286989DF214730C300CA32B2 /* Repository */,
+				2815C4CF215049A60045F90F /* Dependencies */,
+				286989DF214730C300CA32B2 /* UseCase */,
 				4AE5FEAD212F869800ECC99E /* ViewControllers */,
 				4AE5FE95212F63F300ECC99E /* ViewModel */,
 				4A5FA8E7212F5CEB000B75D2 /* Network */,
@@ -279,7 +288,6 @@
 			children = (
 				4AE5FEA7212F7A7200ECC99E /* AmiiboRequest.swift */,
 				4AE5FEA9212F7C9300ECC99E /* AmiiboRouter.swift */,
-				286989E52147476E00CA32B2 /* AmiiboService.swift */,
 			);
 			path = Amiibos;
 			sourceTree = "<group>";
@@ -509,12 +517,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AE5FE9C212F65B600ECC99E /* Amiibo.swift in Sources */,
+				2815C4D1215049B20045F90F /* Dependencies.swift in Sources */,
 				4AE5FEAA212F7C9300ECC99E /* AmiiboRouter.swift in Sources */,
 				2893F6012135C624001EB754 /* DetailViewController.swift in Sources */,
 				4AE5FE98212F640F00ECC99E /* AmiiboViewModel.swift in Sources */,
 				4AE5FEAC212F833100ECC99E /* Array+Extension.swift in Sources */,
 				2893F6042135FA2D001EB754 /* UIResponser+Extension.swift in Sources */,
-				286989E62147476E00CA32B2 /* AmiiboService.swift in Sources */,
 				4AE5FEB9212F901100ECC99E /* AmiiboTableViewCell.swift in Sources */,
 				4AE5FE9E212F6E3100ECC99E /* TypeRouter.swift in Sources */,
 				2893F5FD2134CBB3001EB754 /* AmiibosViewController.swift in Sources */,
@@ -525,7 +533,7 @@
 				2893F60C21360FFE001EB754 /* AmiiboCollectionViewCell.swift in Sources */,
 				4AE5FEA3212F70D100ECC99E /* APIRequester.swift in Sources */,
 				4AE5FEA8212F7A7200ECC99E /* AmiiboRequest.swift in Sources */,
-				286989E42147381100CA32B2 /* AmiiboTypeRepository.swift in Sources */,
+				286989E42147381100CA32B2 /* AmiiboTypeUseCase.swift in Sources */,
 				4AE5FEA5212F790E00ECC99E /* RealmObject.swift in Sources */,
 				4A5FA8E2212F5ADD000B75D2 /* URLSession+Requester.swift in Sources */,
 				2893F6072136078A001EB754 /* AmiibosSearchViewController.swift in Sources */,
@@ -536,7 +544,7 @@
 				4A5FA8E1212F5ADD000B75D2 /* Optional+Unwrap.swift in Sources */,
 				4A5FA8B6212F558F000B75D2 /* AppDelegate.swift in Sources */,
 				4A5FA8D7212F573C000B75D2 /* AmiiboResponse.swift in Sources */,
-				286989E12147310400CA32B2 /* AmiiboRepository.swift in Sources */,
+				286989E12147310400CA32B2 /* AmiiboUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

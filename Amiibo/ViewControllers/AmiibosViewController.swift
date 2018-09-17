@@ -52,7 +52,8 @@ class AmiibosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        binding()
+       binding()
+        viewModel.inputs.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,7 +79,7 @@ class AmiibosViewController: UIViewController {
             .disposed(by: disposeBag)
 
         searchBarButton.rx.tap.bind { [unowned self] in
-            let viewController = AmiibosSearchViewController(viewModel: AmiiboSearchViewModel(reachability: try! DefaultReachabilityService()))
+            let viewController = AmiibosSearchViewController(viewModel: AmiiboSearchViewModel(dependencies: .production))
             let navigationController = UINavigationController(rootViewController: viewController)
             self.present(navigationController, animated: true)
         }.disposed(by: disposeBag)

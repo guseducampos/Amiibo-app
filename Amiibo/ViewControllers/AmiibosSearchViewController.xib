@@ -23,14 +23,12 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6wz-2S-zfb">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6wz-2S-zfb">
                     <rect key="frame" x="0.0" y="107" width="375" height="560"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bBo-5s-4LA">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBo-5s-4LA">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLx-wd-7I4">
                             <rect key="frame" x="12" y="13" width="39" height="30"/>
@@ -39,14 +37,30 @@
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="51" id="tsw-Db-anL"/>
+                    </constraints>
                 </view>
-                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fhO-fP-z9J">
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="fhO-fP-z9J">
                     <rect key="frame" x="0.0" y="51" width="375" height="56"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fhO-fP-z9J" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="0Cp-fK-5lt"/>
+                <constraint firstItem="6wz-2S-zfb" firstAttribute="top" secondItem="fhO-fP-z9J" secondAttribute="bottom" id="BXX-wL-Nc7"/>
+                <constraint firstItem="bBo-5s-4LA" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="DBT-of-dJ6"/>
+                <constraint firstItem="fhO-fP-z9J" firstAttribute="top" secondItem="bBo-5s-4LA" secondAttribute="bottom" id="FBz-2J-HSI"/>
+                <constraint firstItem="6wz-2S-zfb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="MdK-1K-taF"/>
+                <constraint firstItem="6wz-2S-zfb" firstAttribute="top" secondItem="fhO-fP-z9J" secondAttribute="bottom" id="R53-JX-qaW"/>
+                <constraint firstItem="6wz-2S-zfb" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="UBr-g1-f3f"/>
+                <constraint firstItem="fhO-fP-z9J" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="b1W-5Z-YlI"/>
+                <constraint firstItem="bBo-5s-4LA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lHR-N3-id6"/>
+                <constraint firstItem="fhO-fP-z9J" firstAttribute="top" secondItem="bBo-5s-4LA" secondAttribute="bottom" id="t4D-Rg-eFB"/>
+                <constraint firstItem="6wz-2S-zfb" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="yXB-8W-92B"/>
+                <constraint firstItem="bBo-5s-4LA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zfU-H4-Ket"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
