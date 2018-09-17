@@ -4,7 +4,7 @@ This is an Demo app using [Amiibo  API](http://www.amiiboapi.com/), RxSwift  and
 
 
 # Overview.
-This application use MVVM, following [Kickstarter approach](https://github.com/kickstarter/native-docs/blob/master/vm-structure.md) and apply "use case" approach 
+This application use MVVM, following [Kickstarter approach](https://github.com/kickstarter/native-docs/blob/master/vm-structure.md) and apply "use case" 
 like [CleanArchitectureRxSwift](https://github.com/sergdort/CleanArchitectureRxSwift) but in a more simple way (Whithout modules and Repostories for local database).
 
 # Requirements.
