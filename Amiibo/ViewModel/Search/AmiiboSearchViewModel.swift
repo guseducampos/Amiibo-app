@@ -30,18 +30,10 @@ protocol AmiiboSearchViewModelType {
     var output: AmiiboSearchViewModelOutputs { get }
 }
 
-
 final class AmiiboSearchViewModel: AmiiboSearchViewModelType,AmiiboSearchViewModelInput,AmiiboSearchViewModelOutputs {
     
     // MARK: Properties
-    private let reachability: ReachabilityService
-    private let network: API
-    
-    // MARK: Initializer
-    init(requester: APIRequester = URLSession.shared, reachability: ReachabilityService) {
-        self.network = API(requester: requester)
-        self.reachability = reachability
-    }
+    private var searchText: BehaviorRelay<String> = BehaviorRelay(value: "")
     
     var input: AmiiboSearchViewModelInput {
         return self
@@ -50,36 +42,18 @@ final class AmiiboSearchViewModel: AmiiboSearchViewModelType,AmiiboSearchViewMod
     var output: AmiiboSearchViewModelOutputs {
         return self
     }
+ 
+    var showAmiibos: Observable<[Amiibo]> 
     
-    lazy var showAmiibos: Observable<[Amiibo]> = {
-        searchText.asObservable().skip(1).flatMapLatest { text in
-            return self.searchAmiibos(text)
+    // MARK: Initializer
+    init(dependencies: AmiiboViewModelDependencies) {
+        showAmiibos = searchText.skip(1).flatMapLatest  { text in
+            dependencies.amiiboUseCase.searchAmiibos(text).catchErrorJustReturn([])
         }
-    }()
+    }
     
-    private var searchText: BehaviorRelay<String> = BehaviorRelay(value: "")
-    
+    // MARK: Functions
     func searchAmiibos(_ text: String) {
         searchText.accept(text)
-    }
-    
-    private func searchAmiibos(_ text: String) -> Observable<[Amiibo]> {
-        return reachability.reachability.flatMap { reachability -> Observable<[Amiibo]> in
-            if reachability.reachable {
-                return self.network.rx.execute(AmiiboRequest.amiibo(router: .all, compose: add(parameters: ["character": text])))
-            } else {
-                return self.searchAmiibosOnCache(text: text)
-            }
-        }
-    }
-    
-    private func searchAmiibosOnCache(text: String) -> Observable<[Amiibo]> {
-       return Observable.create { observer -> Disposable in
-            let realm = try! Realm()
-            let amiibos = realm.objects(Amiibo.self).filter("character like '%@'", text)
-            observer.onNext(Array(amiibos))
-            observer.onCompleted()
-            return Disposables.create()
-        }.observeOn(MainScheduler.instance)
     }
 }

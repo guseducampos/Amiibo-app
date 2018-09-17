@@ -13,8 +13,8 @@ extension BaseRequest {
     static func makeRequest<T: Decodable>(type: T.Type,
                                           router: Router,
                                           decoder: JSONDecoder,
-                                          compose: RequestBuilder) -> BaseRequest<T> {
-        let requestFactory = RequestFactory(router: router)
+                                          compose: @escaping RequestBuilder) -> BaseRequest<T> {
+        let requestFactory = RequestFactory(router: router, requestBuilder: compose)
         return BaseRequest<T>(requestFactory: requestFactory, decoder: decoder)
     }
 

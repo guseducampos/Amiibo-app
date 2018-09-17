@@ -16,7 +16,11 @@ class AmiibosSearchViewController: UIViewController {
     
     @IBOutlet weak var buttonClose: UIButton!
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        willSet {
+            newValue.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        }
+    }
     
     private let viewModel: AmiiboSearchViewModelType
     
@@ -37,13 +41,23 @@ class AmiibosSearchViewController: UIViewController {
         binding()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+
     private func binding() {
         
-        searchBar.rx.text.bind {[unowned self] text in
-            guard let text = text, !text.isEmpty else {
-                return
-            }
-            self.viewModel.input.searchAmiibos(text)
+        searchBar.rx.text.skip(1).flatMap {
+            Observable.from(optional: $0)
+            }.filter { !$0.isEmpty }
+            .bind { [unowned self] text in
+                self.viewModel.input.searchAmiibos(text)
             }.disposed(by: disposeBag)
         
         viewModel.output.showAmiibos.bind(to: tableView.rx.items(cellIdentifier: "cell")) { index, item, cell in

@@ -10,8 +10,34 @@ import Foundation
 import RealmSwift
 import Realm
 
-class Amiibo: Object, Decodable {
+struct Amiibo: Decodable, RealmRepresentable {
     
+    let name: String
+    let amiiboSeries: String
+    let character: String
+    let gameSeries: String
+    let head: String
+    let image: String
+    let tail: String 
+    let type: String 
+    
+    func realmObject() -> RealmAmiibo {
+        let realmAmiibo = RealmAmiibo()
+        realmAmiibo.name = name
+        realmAmiibo.amiiboSeries = amiiboSeries
+        realmAmiibo.character = character
+        realmAmiibo.gameSeries = gameSeries
+        realmAmiibo.head = head
+        realmAmiibo.image = image
+        realmAmiibo.tail = tail
+        realmAmiibo.type = type
+        return realmAmiibo
+    }
+}
+
+class RealmAmiibo: Object, DomainRepresentable {
+    
+    @objc dynamic var name: String = ""
     @objc dynamic var amiiboSeries: String = ""
     @objc dynamic var character: String = ""
     @objc dynamic var gameSeries: String = ""
@@ -36,25 +62,14 @@ class Amiibo: Object, Decodable {
         return "tail"
     }
     
-    enum CodingKeys: String, CodingKey {
-        case amiiboSeries
-        case character
-        case gameSeries
-        case head
-        case image
-        case tail
-        case type
-    }
-    
-    public required convenience init (from decoder: Decoder) throws {
-        self.init()
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        amiiboSeries = try container.decode(String.self, forKey: .amiiboSeries)
-        character = try container.decode(String.self, forKey: .character)
-        gameSeries = try container.decode(String.self, forKey: .gameSeries)
-        head = try container.decode(String.self, forKey: .head)
-        image = try container.decode(String.self, forKey: .image)
-        tail  = try container.decode(String.self, forKey: .tail)
-        type = try container.decode(String.self, forKey: .type)
+    func domainObject() -> Amiibo {
+        return Amiibo(name: name,
+                      amiiboSeries: amiiboSeries, 
+                      character: character,
+                      gameSeries: gameSeries, 
+                      head: head, 
+                      image: image, 
+                      tail: tail, 
+                      type: type)
     }
 }

@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Amiibo/Utils/Extension/URLSession+Requester.swift"
-            timestampString = "557096273.916827"
+            timestampString = "558912007.670855"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
@@ -25,28 +25,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Amiibo/ViewModel/Amiibo/AmiiboViewModel.swift"
-            timestampString = "557342065.174153"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "showTypes"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Amiibo/ViewControllers/AmiibosSearchViewController.swift"
-            timestampString = "557343204.403425"
+            timestampString = "558913034.093004"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "binding()"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Amiibo/ViewControllers/AmiibosSearchViewController.swift"
-            timestampString = "557343204.4034801"
+            timestampString = "558913034.093082"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "binding()"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Amiibo/ViewControllers/AmiibosSearchViewController.swift"
-            timestampString = "557343204.403522"
+            timestampString = "558913034.09314"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "binding()"
             landmarkType = "7">
             <Locations>
@@ -121,13 +105,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Amiibo/ViewControllers/AmiibosSearchViewController.swift"
-            timestampString = "557343204.403559"
+            filePath = "Amiibo/ViewModel/Amiibo/AmiiboViewModel.swift"
+            timestampString = "558913034.0931979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
             endingLineNumber = "43"
-            landmarkName = "binding()"
+            landmarkName = "init(dependencies:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -137,44 +121,44 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Amiibo/ViewModel/Search/AmiiboSearchViewModel.swift"
-            timestampString = "557887634.918628"
+            filePath = "Amiibo/ViewModel/Amiibo/AmiiboViewModel.swift"
+            timestampString = "558913034.0932519"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "showAmiibos"
-            landmarkType = "24">
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "init(dependencies:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; RxSwift.Observable&lt;Swift.Array&lt;Amiibo.Amiibo&gt;&gt; in Amiibo.AmiiboSearchViewModel.showAmiibos.getter : RxSwift.Observable&lt;Swift.Array&lt;Amiibo.Amiibo&gt;&gt;"
+                  symbolName = "closure #2 (Swift.Array&lt;Amiibo.Type&gt;) -&gt; RxSwift.Observable&lt;Swift.Array&lt;Amiibo.AmiiboType&gt;&gt; in Amiibo.AmiiboViewModel.init(dependencies: Amiibo.AmiiboViewModelDependencies) -&gt; Amiibo.AmiiboViewModel"
                   moduleName = "Amiibo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/gcampos/Documents/xCodeProjects/OcioProjects/Amiibo/Amiibo/ViewModel/Search/AmiiboSearchViewModel.swift"
-                  timestampString = "557343089.130869"
+                  urlString = "file:///Users/gcampos/Documents/xCodeProjects/OcioProjects/Amiibo/Amiibo/ViewModel/Amiibo/AmiiboViewModel.swift"
+                  timestampString = "558910110.7952991"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "17">
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "29">
                </Location>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.String) -&gt; RxSwift.Observable&lt;Swift.Array&lt;Amiibo.Amiibo&gt;&gt; in closure #1 () -&gt; RxSwift.Observable&lt;Swift.Array&lt;Amiibo.Amiibo&gt;&gt; in Amiibo.AmiiboSearchViewModel.showAmiibos.getter : RxSwift.Observable&lt;Swift.Array&lt;Amiibo.Amiibo&gt;&gt;"
+                  symbolName = "closure #1 (Swift.Array&lt;Amiibo.Amiibo&gt;) -&gt; Swift.Array&lt;Amiibo.AmiiboType&gt; in closure #2 (Swift.Array&lt;Amiibo.Type&gt;) -&gt; RxSwift.Observable&lt;Swift.Array&lt;Amiibo.AmiiboType&gt;&gt; in Amiibo.AmiiboViewModel.init(dependencies: Amiibo.AmiiboViewModelDependencies) -&gt; Amiibo.AmiiboViewModel"
                   moduleName = "Amiibo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/gcampos/Documents/xCodeProjects/OcioProjects/Amiibo/Amiibo/ViewModel/Search/AmiiboSearchViewModel.swift"
-                  timestampString = "557343089.133147"
+                  urlString = "file:///Users/gcampos/Documents/xCodeProjects/OcioProjects/Amiibo/Amiibo/ViewModel/Amiibo/AmiiboViewModel.swift"
+                  timestampString = "558910110.798398"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "26">
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "16">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -185,14 +169,237 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Amiibo/ViewModel/Search/AmiiboSearchViewModel.swift"
-            timestampString = "557887634.918993"
+            filePath = "Amiibo/ViewModel/Amiibo/AmiiboViewModel.swift"
+            timestampString = "558913034.093302"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "showAmiibos"
-            landmarkType = "24">
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "init(dependencies:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Amiibo.AmiiboViewModel.init(dependencies: Amiibo.AmiiboViewModelDependencies) -&gt; Amiibo.AmiiboViewModel"
+                  moduleName = "Amiibo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gcampos/Documents/xCodeProjects/OcioProjects/Amiibo/Amiibo/ViewModel/Amiibo/AmiiboViewModel.swift"
+                  timestampString = "558910051.6971461"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "591">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; RxSwift.Observable&lt;Swift.Array&lt;Amiibo.Type&gt;&gt; in Amiibo.AmiiboViewModel.init(dependencies: Amiibo.AmiiboViewModelDependencies) -&gt; Amiibo.AmiiboViewModel"
+                  moduleName = "Amiibo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gcampos/Documents/xCodeProjects/OcioProjects/Amiibo/Amiibo/ViewModel/Amiibo/AmiiboViewModel.swift"
+                  timestampString = "558910051.699272"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Array&lt;Amiibo.Type&gt;) -&gt; RxSwift.Observable&lt;Swift.Array&lt;Amiibo.AmiiboType&gt;&gt; in Amiibo.AmiiboViewModel.init(dependencies: Amiibo.AmiiboViewModelDependencies) -&gt; Amiibo.AmiiboViewModel"
+                  moduleName = "Amiibo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gcampos/Documents/xCodeProjects/OcioProjects/Amiibo/Amiibo/ViewModel/Amiibo/AmiiboViewModel.swift"
+                  timestampString = "558910051.7012171"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "17">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Amiibo/UseCase/AmiiboTypeUseCase.swift"
+            timestampString = "558913034.093354"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "fetchTypes()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Amiibo/UseCase/AmiiboTypeUseCase.swift"
+            timestampString = "558913034.093401"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "getTypes()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Amiibo.AmiiboResponse&lt;Swift.Array&lt;Amiibo.Type&gt;&gt;) -&gt; RxSwift.Observable&lt;Swift.Array&lt;Amiibo.Type&gt;&gt; in Amiibo.AmiiboTypePlatformUseCase.(getTypes in _38A4F53980E50D336FA4B8AFCFAB50AA)() -&gt; RxSwift.Observable&lt;Swift.Array&lt;Amiibo.Type&gt;&gt;"
+                  moduleName = "Amiibo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gcampos/Documents/xCodeProjects/OcioProjects/Amiibo/Amiibo/UseCase/AmiiboTypeUseCase.swift"
+                  timestampString = "558910170.270317"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "22">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; Swift.Array&lt;Amiibo.Type&gt; in closure #1 (Amiibo.AmiiboResponse&lt;Swift.Array&lt;Amiibo.Type&gt;&gt;) -&gt; RxSwift.Observable&lt;Swift.Array&lt;Amiibo.Type&gt;&gt; in Amiibo.AmiiboTypePlatformUseCase.(getTypes in _38A4F53980E50D336FA4B8AFCFAB50AA)() -&gt; RxSwift.Observable&lt;Swift.Array&lt;Amiibo.Type&gt;&gt;"
+                  moduleName = "Amiibo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gcampos/Documents/xCodeProjects/OcioProjects/Amiibo/Amiibo/UseCase/AmiiboTypeUseCase.swift"
+                  timestampString = "558910170.272622"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Amiibo/UseCase/AmiiboTypeUseCase.swift"
+            timestampString = "558913034.093446"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "save(amiiboType:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Amiibo/ViewModel/Search/AmiiboSearchViewModel.swift"
+            timestampString = "558913034.093492"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "init(dependencies:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Amiibo/Network/APIRequester.swift"
+            timestampString = "558913034.093541"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "execute(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RxSwift.AnyObserver&lt;A1.APIResponse&gt;) -&gt; RxSwift.Disposable in (extension in Amiibo):RxSwift.Reactive&lt;A where A: Amiibo.API&gt;.execute&lt;A where A1: JustNetworking.APIRequest&gt;(A1) -&gt; RxSwift.Observable&lt;A1.APIResponse&gt;"
+                  moduleName = "Amiibo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gcampos/Documents/xCodeProjects/OcioProjects/Amiibo/Amiibo/Network/APIRequester.swift"
+                  timestampString = "558912007.896683"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "175">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (JustNetworking.APIResult&lt;A1.APIResponse&gt;) -&gt; () in closure #1 (RxSwift.AnyObserver&lt;A1.APIResponse&gt;) -&gt; RxSwift.Disposable in (extension in Amiibo):RxSwift.Reactive&lt;A where A: Amiibo.API&gt;.execute&lt;A where A1: JustNetworking.APIRequest&gt;(A1) -&gt; RxSwift.Observable&lt;A1.APIResponse&gt;"
+                  moduleName = "Amiibo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gcampos/Documents/xCodeProjects/OcioProjects/Amiibo/Amiibo/Network/APIRequester.swift"
+                  timestampString = "558912007.898227"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "173">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Amiibo/Utils/Extension/URLSession+Requester.swift"
+            timestampString = "558912007.671798"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "execute(_:response:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Amiibo/Network/Amiibos/AmiiboRequest.swift"
+            timestampString = "558913034.093618"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "add(parameters:)"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

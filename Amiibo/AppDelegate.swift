@@ -21,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
          GlobalConfiguration.setCurrentURL(URL(string: "http://www.amiiboapi.com/api")!)
         
-        let viewController = AmiibosViewController(viewModel: AmiiboViewModel(reachability: try! DefaultReachabilityService()))
+        let viewController = AmiibosViewController(viewModel: AmiiboViewModel(dependencies: .production))
+        
         let navigation = UINavigationController(rootViewController: viewController)
         
         window?.rootViewController = navigation
